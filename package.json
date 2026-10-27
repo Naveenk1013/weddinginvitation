@@ -1,0 +1,30 @@
+{
+  "name": "rachna-udit-wedding-invitation",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "type-check": "tsc --noEmit",
+    "test:qa": "node scripts/qa-audit.mjs"
+  },
+  "dependencies": {
+    "framer-motion": "^14.6.0",
+    "motion": "^14.6.0",
+    "motion-ai": "^14.2.0",
+    "next": "^15.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.2.1",
+    "typescript": "^5.7.0"
+  }
+}

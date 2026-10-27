@@ -1,0 +1,26 @@
+{
+  "name": "rachna-udit-wedding-invitation-agent-pack",
+  "version": "0.0.1",
+  "description": "AI-agent documentation pack for Rachna & Udit's mobile-first, Hindi-first animated e-wedding invitation.",
+  "defaultLocale": "hi-IN",
+  "secondaryLocale": "en-IN",
+  "confirmed": {
+    "invocation": "॥ श्री गणेशाय नमः ॥",
+    "couple": "रचना × उदित",
+    "events": [
+      { "id": "tilak", "date": "2026-11-25", "weekday": "Wednesday" },
+      { "id": "vivah", "date": "2026-12-02", "weekday": "Wednesday" }
+    ]
+  },
+  "readingOrder": [
+    "README.md", "INSTRUCTIONS.md", "docs/PROJECT_BRIEF.md", "docs/CONTENT_SPEC.md", "docs/I18N.md",
+    "docs/DESIGN_SYSTEM.md", "docs/MOBILE_UX.md", "docs/PERFORMANCE.md", "docs/ACCESSIBILITY.md",
+    "docs/MOTION_SYSTEM.md", "docs/ANIMATION_CATALOG.md", "docs/TECHNICAL_ARCHITECTURE.md",
+    "docs/COMPONENTS.md", "TASKS.md", "PROGRESS.md", "DECISIONS.md"
+  ],
+  "files": {
+    "root": ["README.md","AGENTS.md","INSTRUCTIONS.md","TASKS.md","PROGRESS.md","DECISIONS.md","CHANGELOG.md"],
+    "docs": ["PROJECT_BRIEF.md","CONTENT_SPEC.md","DESIGN_SYSTEM.md","MOTION_SYSTEM.md","ANIMATION_CATALOG.md","MOBILE_UX.md","I18N.md","TECHNICAL_ARCHITECTURE.md","COMPONENTS.md","PERFORMANCE.md","ACCESSIBILITY.md","ASSET_GUIDE.md","QA_TEST_PLAN.md","IMPLEMENTATION_BLUEPRINT.md","RESEARCH.md"]
+  },
+  "pending": ["eventTimes","venues","hosts","rsvp","dressCode","muhurat","accommodation","photographs","music","additionalCeremonies"]
+}
