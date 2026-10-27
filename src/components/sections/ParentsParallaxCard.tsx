@@ -58,6 +58,11 @@ export function ParentsParallaxCard({ className = "" }: ParentsParallaxCardProps
     [-0.5, 0, 0.5],
     [0.35, 0.15, 0.35]
   );
+  const glareBackground = useTransform(
+    [glareX, glareY],
+    ([xVal, yVal]) =>
+      `radial-gradient(circle 220px at ${xVal} ${yVal}, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.1) 45%, transparent 75%)`
+  );
 
   // Scroll-linked gentle parallax translation
   const { scrollYProgress } = useScroll({
@@ -258,11 +263,7 @@ export function ParentsParallaxCard({ className = "" }: ParentsParallaxCardProps
                 borderRadius: 22,
                 borderTopLeftRadius: 150,
                 borderTopRightRadius: 150,
-                background: useTransform(
-                  [glareX, glareY],
-                  ([xVal, yVal]) =>
-                    `radial-gradient(circle 220px at ${xVal} ${yVal}, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.1) 45%, transparent 75%)`
-                ),
+                background: glareBackground,
                 opacity: glareOpacity,
                 transform: "translateZ(20px)",
                 pointerEvents: "none",

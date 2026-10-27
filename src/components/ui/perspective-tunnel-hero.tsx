@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 import * as m from "motion/react-m";
 import {
   AnimatePresence,
@@ -141,10 +142,12 @@ function TunnelCard({ card, progress, pointer, total, stage, locale }: TunnelCar
       className="tunnel-card-wrap select-none"
     >
       <div className="tunnel-card-inner group">
-        <img
+        <Image
           src={card.item.src}
           alt={displayTitle}
           draggable={false}
+          width={280}
+          height={380}
           className="tunnel-card-img"
         />
         <div className="tunnel-card-overlay">
@@ -230,11 +233,11 @@ export function PerspectiveTunnelHero({
   }, [activeOpen]);
 
   // Trigger Royal Opening Gate effect
-  const handleOpenGate = () => {
+  const handleOpenGate = useCallback(() => {
     if (isGateOpening) return;
     setIsGateOpening(true);
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  };
+  }, [isGateOpening]);
 
   // Called when the royal gates complete their outward swing
   const handleGateAnimationComplete = () => {
@@ -326,7 +329,7 @@ export function PerspectiveTunnelHero({
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeOpen, isGateOpening, rawProgress]);
+  }, [activeOpen, isGateOpening, rawProgress, handleOpenGate]);
 
   const pointer = useCameraParallax(!reduce);
 
