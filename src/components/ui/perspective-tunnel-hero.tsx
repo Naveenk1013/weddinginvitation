@@ -330,13 +330,15 @@ export function PerspectiveTunnelHero({
 
   const pointer = useCameraParallax(!reduce);
 
-  const promptOpacity = useTransform(smoothProgress, [0, 0.15], [1, 0.3]);
+  const scrollIndicatorOpacity = useTransform(smoothProgress, [0, 0.12], [1, 0]);
 
   // Main Header: Solely ॥ श्री गणेशाय नमः ॥ as requested
   const resolvedHeader = tag;
   const enterButtonText =
     locale === "hi" ? "सप्रेम आमंत्रण में प्रवेश करें • Enter" : "Enter Royal Invitation • सप्रेम प्रवेश";
   const skipText = locale === "hi" ? "सीधे प्रवेश करें →" : "Enter Directly →";
+  const scrollPromptText =
+    locale === "hi" ? "नीचे स्क्रॉल करें • Scroll Down" : "Scroll Down • नीचे स्क्रॉल करें";
 
   return (
     <AnimatePresence>
@@ -416,6 +418,46 @@ export function PerspectiveTunnelHero({
 
             {/* Interactive Scroll & Enter Prompt — Centered at Bottom */}
             <div className="tunnel-enter-wrap">
+              {/* Animated Royal Scroll Down Indicator — Softly fades away as user scrolls */}
+              <m.div
+                style={{
+                  opacity: scrollIndicatorOpacity,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: 6,
+                  marginBottom: 10,
+                  pointerEvents: "none",
+                }}
+                aria-hidden="true"
+              >
+                {/* Royal Mouse Icon with Scrolling Gold Bead */}
+                <div className="tunnel-mouse-icon">
+                  <div className="tunnel-mouse-wheel" />
+                </div>
+
+                {/* Scroll Down Instruction Text */}
+                <span className="tunnel-scroll-text">
+                  {scrollPromptText}
+                </span>
+
+                {/* Animated Pulsing Down Chevron */}
+                <svg
+                  className="tunnel-scroll-chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </m.div>
+
+              {/* Enter Button with Golden Badge */}
               <button
                 type="button"
                 onClick={handleOpenGate}
@@ -426,16 +468,6 @@ export function PerspectiveTunnelHero({
                   <span>✨</span>
                   <span>{enterButtonText}</span>
                 </span>
-                <m.div
-                  style={{
-                    opacity: promptOpacity,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <div className="tunnel-scroll-indicator" />
-                </m.div>
               </button>
             </div>
 

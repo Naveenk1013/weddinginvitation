@@ -325,10 +325,81 @@
   white-space: nowrap;
 }
 
-.tunnel-scroll-indicator {
-  width: 2px;
-  height: 18px;
-  background: linear-gradient(to bottom, var(--gold, #B07A22), transparent);
-  border-radius: 2px;
+/* ==========================================================================
+   Royal Animated Scroll Down Indicator
+   ========================================================================== */
+
+.tunnel-mouse-icon {
+  width: 20px;
+  height: 32px;
+  border-radius: 12px;
+  border: 1.8px solid var(--gold, #B07A22);
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  background: rgba(13, 4, 7, 0.45);
+  box-shadow: 0 0 12px rgba(176, 122, 34, 0.35);
 }
+
+.tunnel-mouse-wheel {
+  width: 3.5px;
+  height: 7px;
+  border-radius: 2px;
+  background-color: #FDE047;
+  box-shadow: 0 0 6px rgba(253, 224, 71, 0.9);
+  animation: tunnelWheelGlide 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes tunnelWheelGlide {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.tunnel-scroll-text {
+  font-family: var(--font-sans-family);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFDF8;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(176, 122, 34, 0.6);
+}
+
+.tunnel-scroll-chevron {
+  color: var(--gold, #B07A22);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
+  animation: tunnelChevronBounce 1.8s ease-in-out infinite;
+}
+
+@keyframes tunnelChevronBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tunnel-mouse-wheel,
+  .tunnel-scroll-chevron {
+    animation: none !important;
+  }
+}
+
 

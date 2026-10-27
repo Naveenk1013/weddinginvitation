@@ -6,6 +6,8 @@ import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { SectionTransition } from "@/components/motion/SectionTransition";
 import { SectionDivider } from "@/components/art/SectionDivider";
 
+import { ParentsParallaxCard } from "./ParentsParallaxCard";
+
 export function InvitationMessage() {
   const { t } = useLocale();
 
@@ -81,44 +83,9 @@ export function InvitationMessage() {
             </p>
           </ScrollReveal>
 
-          {/* Sacred Bride's Parents Honor Card */}
+          {/* Sacred Bride's Parents 3D Parallax Portrait & Honor Card */}
           <ScrollReveal variant="fade-up" delay={0.16}>
-            <div
-              style={{
-                marginTop: 18,
-                marginBottom: 14,
-                padding: "12px 16px",
-                borderRadius: 14,
-                backgroundColor: "rgba(255, 255, 255, 0.8)",
-                border: "1.2px solid rgba(176, 122, 34, 0.45)",
-                boxShadow: "0 2px 8px rgba(110, 30, 42, 0.06)",
-                display: "inline-block",
-                maxWidth: 360,
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "0.8rem",
-                  letterSpacing: "0.08em",
-                  color: "var(--muted)",
-                  fontWeight: 600,
-                  marginBottom: 3,
-                  textTransform: "uppercase",
-                }}
-              >
-                {t.hosts.brideParentsTitle}
-              </p>
-              <p
-                className="font-ceremonial text-maroon"
-                style={{
-                  fontSize: "clamp(1.02rem, 3.8vw, 1.2rem)",
-                  fontWeight: 700,
-                  letterSpacing: "0.02em",
-                }}
-              >
-                {t.hosts.brideParentsNames}
-              </p>
-            </div>
+            <ParentsParallaxCard />
           </ScrollReveal>
 
           <ScrollReveal variant="fade-up" delay={0.2}>
