@@ -6,6 +6,8 @@ _Last updated: 2026-10-25_
 Phases 0, 1, 2, 3, and 4 are fully implemented, compiled, and verified. The Next.js App Router application is building cleanly (`next build` succeeds with 0 errors). The user-supplied couple portrait illustration and a complete scroll-driven transformative animation suite have been integrated.
 
 ## Done
+- [x] Parents 3D Parallax Portrait Card: Added high-resolution portrait photograph of bride's parents (Mrs. Ranju Prasad & Mr. Yogendra Prasad) in `public/images/parents.png` with interactive 3D perspective tilt (`preserve-3d`, mouse/touch tracking, dynamic specular glare sheen, radiant golden halo aura, Jharokha arch frame, and `prefers-reduced-motion` support) in `ParentsParallaxCard.tsx` embedded within `InvitationMessage.tsx`.
+- [x] Corridor Scroll Indicator: Added animated royal scroll down mouse icon, dual-language label ("नीचे स्क्रॉल करें • Scroll Down"), and pulsing downward chevron with scroll-linked opacity fade in `perspective-tunnel-hero.tsx` & `.css`.
 - [x] Phase 5 Content Integration (Slice 1): Added Add-to-Calendar for Tilak (25 Nov) & Vivah (2 Dec), integrated hometown venue and direct Google Maps navigation (`https://maps.app.goo.gl/tQhtXHdjyp7GPzuD7`), and honored Bride's parents (Mrs. Ranju Prasad & Mr. Yogendra Prasad).
 - [x] Research and creative direction ("Sacred Marigold Garden")
 - [x] 22-file agent documentation pack
