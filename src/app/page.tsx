@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { FloatingControls } from "@/components/ui/FloatingControls";
+import { FloatingRsvp } from "@/components/ui/FloatingRsvp";
 import { ClickSpark } from "@/components/ui/ClickSpark";
 import { Ribbons } from "@/components/ui/Ribbons";
 import { MarigoldPetals } from "@/components/art/MarigoldPetals";
@@ -65,6 +66,9 @@ export default function WeddingInvitationPage() {
 
       {/* Floating Header Controls (Language Switcher) */}
       <FloatingControls />
+
+      {/* Floating Bottom-Left WhatsApp RSVP CTA Button */}
+      <FloatingRsvp isVisible={entryStage === "invitation"} />
 
       {/* Ambient Drifting Marigold Petals (Paused if prefers-reduced-motion) */}
       <MarigoldPetals />

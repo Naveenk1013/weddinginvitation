@@ -46,13 +46,20 @@ Phases 0, 1, 2, 3, and 4 are fully implemented, compiled, and verified. The Next
 | Event times (tilak, vivah) | Family | Confirmed all-day celebration |
 | Venues + map links | Family | Confirmed (Doila Bintoli / Maps link integrated) |
 | Parent / host names | Family | Confirmed (Mrs. Ranju Prasad & Mr. Yogendra Prasad integrated) |
-| RSVP contact or method | Family | Pending WhatsApp details |
+| RSVP contact or method | Family | Confirmed (WhatsApp 7217679066 integrated) |
 | Dress code, accommodation | Family | Pending |
 | Photographs | Family | Pending |
 | Background music track + approval | Family | Pending |
 | Additional ceremonies | Family | Confirmed (Mehendi: 29 Nov, Matkor: 30 Nov integrated) |
 
 ## Slice log
+### 2026-11-03 — Phase 5 Content Integration (Slice 5: WhatsApp RSVP Floating CTA)
+- **What changed**:
+  - Implemented `FloatingRsvp.tsx` anchored to the bottom-left viewport with official WhatsApp SVG icon, bilingual label, and direct pre-filled invitation confirmation link targeting `7217679066`.
+  - Configured `wedding.rsvp` in `wedding.ts` and updated `manifest.json`.
+- **Verification**:
+  - `npm run type-check`: 0 TypeScript errors.
+
 ### 2026-11-03 — UI Refinement (Slice 4: Replay Buttons Clean-Up & Language Switcher Geometry)
 - **What changed**:
   - Removed secondary top corridor & video replay buttons from `page.tsx` and floating sparkle circle button from `FloatingControls.tsx`.

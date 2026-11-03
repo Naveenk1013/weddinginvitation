@@ -194,7 +194,11 @@ export const wedding: WeddingData = {
       },
     },
   ],
-  rsvp: null,
+  rsvp: {
+    method: "whatsapp",
+    value: "7217679066",
+    deadline: null,
+  },
   accommodation: null,
   gallery: null,
   music: null,

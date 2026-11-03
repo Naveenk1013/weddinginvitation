@@ -4,6 +4,15 @@ All notable changes to this project. Newest first. Format loosely follows Keep a
 
 ## [Unreleased]
 
+## [0.1.24] — WhatsApp RSVP Floating CTA Integration
+### Added & Configured
+- **WhatsApp RSVP CTA (`FloatingRsvp.tsx`, `wedding.ts`)**:
+  - Configured confirmed family WhatsApp contact `"7217679066"` in canonical model.
+  - Built accessible, animated floating CTA anchored to the bottom-left of the viewport with official vector logo and bilingual RSVP label.
+  - Generates direct pre-filled invitation confirmation link directing guests to `https://wa.me/917217679066`.
+  - Automatically hidden during initial 3D corridor and gateway video, seamlessly revealed upon entering the main invitation.
+  - Touch target meets ≥ 44×44 CSS px standards with reduced-motion support.
+
 ## [0.1.23] — Removal of Main Page Replay Buttons & Language Switcher Refinement
 ### Changed & Refined
 - **Removed Main Page Replay Buttons**:

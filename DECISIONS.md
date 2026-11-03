@@ -212,5 +212,14 @@ Each image was compressed to lean mobile-friendly sizes (140–200 KB) using Moz
    - Refined `.lang-switch-btn` to 28px height, 34px min-width, and 0.82rem font size with crisp subpixel anti-aliasing.
    - Eliminated CSS background conflict on the active tab, rendering the animated maroon thumb (`m.span`) cleanly behind crisp foreground text on high-DPI mobile viewports.
 
+## D-038 — WhatsApp RSVP Floating CTA (7217679066) — Accepted
+1. **Dedicated Bottom-Left WhatsApp Floating CTA**:
+   - Integrated confirmed RSVP contact `7217679066` into `wedding.ts` and `FloatingRsvp.tsx`.
+   - Fixed to the bottom-left corner (`bottom: max(16px, calc(var(--safe-bottom) + 16px)); left: max(16px, calc(var(--safe-left) + 16px)); z-index: 850`).
+   - Sized at ≥ 44×44 CSS px, satisfying touch target criteria.
+   - Styled with radiant WhatsApp gradient, official vector SVG logo, white typography, and delicate shadow blur.
+   - Generates pre-filled respectful bilingual WhatsApp confirmation messages directing guests to `https://wa.me/917217679066`.
+   - Revealed seamlessly once the guest enters the main invitation.
+
 
 

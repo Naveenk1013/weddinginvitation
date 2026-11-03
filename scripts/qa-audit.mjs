@@ -128,6 +128,7 @@ try {
     { name: "Mehendi Date (29 नवंबर 2026)", test: html.includes("29 नवंबर 2026") },
     { name: "Matkor Date (30 नवंबर 2026)", test: html.includes("30 नवंबर 2026") },
     { name: "Vivah Date (2 दिसंबर 2026)", test: html.includes("2 दिसंबर 2026") },
+    { name: "WhatsApp RSVP CTA Link (7217679066)", test: html.includes("7217679066") },
     { name: "Skip to Content Link", test: html.includes('class="skip-link"') },
     { name: "Semantic <header> landmark", test: html.includes("<header") },
     { name: "Semantic <main> landmark", test: html.includes("<main") },

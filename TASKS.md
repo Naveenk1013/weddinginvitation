@@ -53,7 +53,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked on conten
 - [x] Venue + map link (Doila Bintoli, Bihar / https://maps.app.goo.gl/tQhtXHdjyp7GPzuD7)
 - [x] Family / hosts section (Bride Rachna Kumari parents: Mrs. Ranju Prasad & Mr. Yogendra Prasad)
 - [x] Additional ceremonies: Shubh Mehendi (29 Nov 2026, Sunday) & Shubh Matkor (30 Nov 2026, Monday)
-- [ ] RSVP (WhatsApp contact — to be added later)
+- [x] RSVP (WhatsApp CTA button: 7217679066)
 - [ ] Dress code, accommodation (pending family confirmation)
 - [ ] Photo gallery (pending family confirmation)
 - [ ] Background music + controls (pending family confirmation)
