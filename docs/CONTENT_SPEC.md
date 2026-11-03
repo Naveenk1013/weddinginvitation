@@ -14,6 +14,12 @@
 शुभ तिलक
 बुधवार, 25 नवंबर 2026
 
+शुभ मेहंदी
+रविवार, 29 नवंबर 2026
+
+शुभ मटकोर
+सोमवार, 30 नवंबर 2026
+
 शुभ विवाह
 बुधवार, 2 दिसंबर 2026
 ```
@@ -29,6 +35,12 @@ Please join us with your family to celebrate the wedding of Rachna and Udit and 
 
 Shubh Tilak
 Wednesday, 25 November 2026
+
+Shubh Mehendi
+Sunday, 29 November 2026
+
+Shubh Matkor
+Monday, 30 November 2026
 
 Shubh Vivah
 Wednesday, 2 December 2026

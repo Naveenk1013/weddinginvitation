@@ -2,15 +2,15 @@ import type { TranslationDictionary } from "./types";
 
 export const en: TranslationDictionary = {
   meta: {
-    title: "Rachna × Udit | Wedding Invitation",
-    description: "Digital wedding invitation for the auspicious wedding of Rachna & Udit. 25 November & 2 December 2026.",
+    title: "Rachna and Udit | Wedding Invitation",
+    description: "Digital wedding invitation for the auspicious wedding of Rachna and Udit. 25 November to 2 December 2026.",
   },
   hero: {
     sacredInvocation: "॥ श्री गणेशाय नमः ॥",
     sacredInvocationSubtitle: "Shree Ganeshaya Namah",
     brideName: "Rachna",
     groomName: "Udit",
-    connector: "weds",
+    connector: "and",
     scrollPrompt: "View Invitation",
     portraitAlt: "Portrait illustration of Rachna and Udit",
   },
@@ -27,6 +27,16 @@ export const en: TranslationDictionary = {
       title: "Shubh Tilak",
       weekday: "Wednesday",
       dateFormatted: "25 November 2026",
+    },
+    mehendi: {
+      title: "Shubh Mehendi",
+      weekday: "Sunday",
+      dateFormatted: "29 November 2026",
+    },
+    matkor: {
+      title: "Shubh Matkor",
+      weekday: "Monday",
+      dateFormatted: "30 November 2026",
     },
     vivah: {
       title: "Shubh Vivah",
@@ -57,8 +67,8 @@ export const en: TranslationDictionary = {
   share: {
     buttonLabel: "Share Invitation",
     copiedMessage: "Invitation link copied to clipboard",
-    shareTitle: "Rachna × Udit — Wedding Invitation",
-    shareText: "॥ श्री गणेशाय नमः ॥ You are warmly invited to the wedding celebrations of Rachna & Udit.",
+    shareTitle: "Rachna and Udit — Wedding Invitation",
+    shareText: "॥ श्री गणेशाय नमः ॥ You are warmly invited to the wedding celebrations of Rachna and Udit.",
   },
   closing: {
     blessing: "Warmly awaiting your gracious presence",

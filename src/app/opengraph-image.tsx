@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "रचना × उदित | शुभ विवाह सप्रेम आमंत्रण";
+export const alt = "रचना संग उदित | शुभ विवाह सप्रेम आमंत्रण";
 export const size = {
   width: 1200,
   height: 630,
@@ -80,7 +80,7 @@ export default async function Image() {
           }}
         >
           <span>रचना</span>
-          <span style={{ fontSize: 44, color: "#C85A16" }}>×</span>
+          <span style={{ fontSize: 40, color: "#C85A16", fontWeight: 600 }}>संग</span>
           <span>उदित</span>
         </div>
 

@@ -26,6 +26,16 @@ export interface TranslationDictionary {
       weekday: string;
       dateFormatted: string;
     };
+    mehendi: {
+      title: string;
+      weekday: string;
+      dateFormatted: string;
+    };
+    matkor: {
+      title: string;
+      weekday: string;
+      dateFormatted: string;
+    };
     vivah: {
       title: string;
       weekday: string;

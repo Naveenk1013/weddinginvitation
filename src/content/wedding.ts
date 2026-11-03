@@ -6,7 +6,7 @@ export type LocaleText = {
 };
 
 export interface WeddingEvent {
-  id: "tilak" | "vivah" | string;
+  id: "tilak" | "mehendi" | "matkor" | "vivah" | string;
   title: LocaleText;
   date: string; // ISO date "YYYY-MM-DD"
   time: string | null; // "HH:mm" local, null until confirmed
@@ -85,11 +85,11 @@ export const wedding: WeddingData = {
       timezone: "Asia/Kolkata",
       venue: {
         name: {
-          hi: "दोइला बिनटोली (गृहग्राम)",
+          hi: "डोईला बिनटोली (गृहग्राम)",
           en: "Doila Bintoli (Hometown)",
         },
         address: {
-          hi: "दोइला बिनटोली, बिहार",
+          hi: "डोईला बिनटोली, बिहार",
           en: "Doila Bintoli, Bihar",
         },
       },
@@ -103,6 +103,56 @@ export const wedding: WeddingData = {
       },
     },
     {
+      id: "mehendi",
+      title: { hi: "शुभ मेहंदी", en: "Shubh Mehendi" },
+      date: "2026-11-29",
+      time: null,
+      timezone: "Asia/Kolkata",
+      venue: {
+        name: {
+          hi: "डोईला बिनटोली (गृहग्राम)",
+          en: "Doila Bintoli (Hometown)",
+        },
+        address: {
+          hi: "डोईला बिनटोली, बिहार",
+          en: "Doila Bintoli, Bihar",
+        },
+      },
+      mapUrl: "https://maps.app.goo.gl/tQhtXHdjyp7GPzuD7",
+      dressCode: null,
+      notes: null,
+      image: "/images/events/mehendi.jpg",
+      imageAlt: {
+        hi: "शुभ मेहंदी समारोह के पावन रंग, पारंपरिक मेंहदी एवं मंगल सज्जा",
+        en: "Auspicious Shubh Mehendi celebration with traditional henna and festive floral decor",
+      },
+    },
+    {
+      id: "matkor",
+      title: { hi: "शुभ मटकोर", en: "Shubh Matkor" },
+      date: "2026-11-30",
+      time: null,
+      timezone: "Asia/Kolkata",
+      venue: {
+        name: {
+          hi: "डोईला बिनटोली (गृहग्राम)",
+          en: "Doila Bintoli (Hometown)",
+        },
+        address: {
+          hi: "डोईला बिनटोली, बिहार",
+          en: "Doila Bintoli, Bihar",
+        },
+      },
+      mapUrl: "https://maps.app.goo.gl/tQhtXHdjyp7GPzuD7",
+      dressCode: null,
+      notes: null,
+      image: "/images/events/matkor.jpg",
+      imageAlt: {
+        hi: "शुभ मटकोर पावन मिट्टी पूजन, मंगल कलश एवं पारंपरिक लोक रस्म",
+        en: "Sacred Shubh Matkor earthen clay worship and ceremonial kalash ritual",
+      },
+    },
+    {
       id: "vivah",
       title: { hi: "शुभ विवाह", en: "Shubh Vivah" },
       date: "2026-12-02",
@@ -110,11 +160,11 @@ export const wedding: WeddingData = {
       timezone: "Asia/Kolkata",
       venue: {
         name: {
-          hi: "दोइला बिनटोली (गृहग्राम)",
+          hi: "डोईला बिनटोली (गृहग्राम)",
           en: "Doila Bintoli (Hometown)",
         },
         address: {
-          hi: "दोइला बिनटोली, बिहार",
+          hi: "डोईला बिनटोली, बिहार",
           en: "Doila Bintoli, Bihar",
         },
       },

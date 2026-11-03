@@ -8,6 +8,8 @@ import type { WeddingEvent } from "@/content/wedding";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { TilakIcon } from "@/components/art/TilakIcon";
 import { VivahIcon } from "@/components/art/VivahIcon";
+import { MehendiIcon } from "@/components/art/MehendiIcon";
+import { MatkorIcon } from "@/components/art/MatkorIcon";
 import { AddToCalendar } from "@/components/ui/AddToCalendar";
 
 interface EventCardProps {
@@ -19,12 +21,40 @@ export function EventCard({ event, isPrimary = false }: EventCardProps) {
   const { locale, t } = useLocale();
   const shouldReduceMotion = useReducedMotion();
 
-  const isTilak = event.id === "tilak";
   const title = event.title[locale];
 
-  const weekdayText = isTilak ? t.events.tilak.weekday : t.events.vivah.weekday;
-  const formattedDate = isTilak ? t.events.tilak.dateFormatted : t.events.vivah.dateFormatted;
+  const eventMap: Record<string, { weekday: string; dateFormatted: string }> = {
+    tilak: t.events.tilak,
+    mehendi: t.events.mehendi,
+    matkor: t.events.matkor,
+    vivah: t.events.vivah,
+  };
+  const eventI18n = eventMap[event.id] || t.events.vivah;
+  const weekdayText = eventI18n.weekday;
+  const formattedDate = eventI18n.dateFormatted;
   const imageAltText = event.imageAlt ? event.imageAlt[locale] : `${title} ceremony`;
+
+  const badgeMap: Record<string, { hi: string; en: string }> = {
+    tilak: { hi: "शुभ मुहूर्त", en: "Auspicious Muhurat" },
+    mehendi: { hi: "मेहंदी रंग", en: "Henna Celebration" },
+    matkor: { hi: "मंगल रस्म", en: "Sacred Earth Ritual" },
+    vivah: { hi: "मांगलिक लग्न", en: "Sacred Nuptials" },
+  };
+  const badge = badgeMap[event.id] || { hi: "शुभ उत्सव", en: "Auspicious Ceremony" };
+
+  const renderIcon = (size: number) => {
+    switch (event.id) {
+      case "tilak":
+        return <TilakIcon size={size} />;
+      case "mehendi":
+        return <MehendiIcon size={size} />;
+      case "matkor":
+        return <MatkorIcon size={size} />;
+      case "vivah":
+      default:
+        return <VivahIcon size={size} />;
+    }
+  };
 
   return (
     <m.article
@@ -117,9 +147,7 @@ export function EventCard({ event, isPrimary = false }: EventCardProps) {
               boxShadow: "0 2px 8px rgba(0,0,0,0.25)",
             }}
           >
-            {locale === "hi"
-              ? (isTilak ? "शुभ मुहूर्त" : "मांगलिक लग्न")
-              : (isTilak ? "Auspicious Muhurat" : "Sacred Nuptials")}
+            {locale === "hi" ? badge.hi : badge.en}
           </div>
         </div>
       )}
@@ -151,12 +179,12 @@ export function EventCard({ event, isPrimary = false }: EventCardProps) {
                 justifyContent: "center",
               }}
             >
-              {isTilak ? <TilakIcon size={30} /> : <VivahIcon size={30} />}
+              {renderIcon(30)}
             </div>
           </div>
         ) : (
           <div style={{ marginBottom: 12, display: "flex", justifyContent: "center" }}>
-            {isTilak ? <TilakIcon size={44} /> : <VivahIcon size={44} />}
+            {renderIcon(44)}
           </div>
         )}
 

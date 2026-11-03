@@ -6,6 +6,7 @@ _Last updated: 2026-10-25_
 Phases 0, 1, 2, 3, and 4 are fully implemented, compiled, and verified. The Next.js App Router application is building cleanly (`next build` succeeds with 0 errors). The user-supplied couple portrait illustration and a complete scroll-driven transformative animation suite have been integrated.
 
 ## Done
+- [x] Mehendi & Matkor Ceremonies Integration: Added Shubh Mehendi on Sunday, 29 November 2026 and Shubh Matkor on Monday, 30 November 2026. Generated and optimized ceremonial photography (`mehendi.jpg`, `matkor.jpg`), designed animated SVG icons (`MehendiIcon.tsx`, `MatkorIcon.tsx`), updated bilingual translations, dynamic `EventCard` mapping, Add-to-Calendar links, and 3D ceremony corridor dates.
 - [x] Parents 3D Parallax Portrait Card: Added high-resolution portrait photograph of bride's parents (Mrs. Ranju Prasad & Mr. Yogendra Prasad) in `public/images/parents.png` with interactive 3D perspective tilt (`preserve-3d`, mouse/touch tracking, dynamic specular glare sheen, radiant golden halo aura, Jharokha arch frame, and `prefers-reduced-motion` support) in `ParentsParallaxCard.tsx` embedded within `InvitationMessage.tsx`.
 - [x] Corridor Scroll Indicator: Added animated royal scroll down mouse icon, dual-language label ("नीचे स्क्रॉल करें • Scroll Down"), and pulsing downward chevron with scroll-linked opacity fade in `perspective-tunnel-hero.tsx` & `.css`.
 - [x] Phase 5 Content Integration (Slice 1): Added Add-to-Calendar for Tilak (25 Nov) & Vivah (2 Dec), integrated hometown venue and direct Google Maps navigation (`https://maps.app.goo.gl/tQhtXHdjyp7GPzuD7`), and honored Bride's parents (Mrs. Ranju Prasad & Mr. Yogendra Prasad).
@@ -49,9 +50,31 @@ Phases 0, 1, 2, 3, and 4 are fully implemented, compiled, and verified. The Next
 | Dress code, accommodation | Family | Pending |
 | Photographs | Family | Pending |
 | Background music track + approval | Family | Pending |
-| Additional ceremonies | Family | Pending |
+| Additional ceremonies | Family | Confirmed (Mehendi: 29 Nov, Matkor: 30 Nov integrated) |
 
 ## Slice log
+### 2026-11-03 — Phase 5 Content Integration (Slice 3: Connector & Hometown Orthography)
+- **What changed**:
+  - Replaced `×` symbol with authentic language-appropriate connectors: "रचना संग उदित" in Hindi and "Rachna and Udit" in English.
+  - Dynamically connected `CoupleReveal.tsx` to `{t.hero.connector}`.
+  - Standardized the Hindi spelling of the hometown venue to "डोईला बिनटोली, बिहार" across all events and calendar utilities.
+- **Verification**:
+  - `npm run type-check`: 0 TypeScript errors.
+
+### 2026-11-03 — Phase 5 Content Integration (Slice 2: Mehendi & Matkor Ceremonies)
+- **What changed**:
+  - Integrated Shubh Mehendi on Sunday, 29 November 2026 and Shubh Matkor on Monday, 30 November 2026 into `wedding.ts`.
+  - Added authentic ceremonial photography (`mehendi.jpg` 152 KB and `matkor.jpg` 100 KB) in `public/images/events/`.
+  - Designed custom animated SVG art icons `MehendiIcon.tsx` and `MatkorIcon.tsx` adhering to cultural rules and `prefers-reduced-motion`.
+  - Upgraded `EventCard.tsx` with dynamic event mappings for titles, weekdays, dates, ceremony badges, and icons.
+  - Added full bilingual dictionary strings in `src/i18n/hi.ts`, `src/i18n/en.ts`, and `src/i18n/types.ts`.
+  - Connected Add-to-Calendar for Google Calendar and Apple/Outlook `.ics` generation.
+  - Updated 3D ceremony corridor (`perspective-tunnel-hero.tsx`) with confirmed dates `शुभ मेहंदी • 29 Nov` and `शुभ मटकोर • 30 Nov`.
+  - Updated `manifest.json` and `scripts/qa-audit.mjs` verifying Sunday and Monday weekday alignments.
+- **Verification**:
+  - `npm run type-check`: 0 TypeScript errors.
+  - Automated QA assertions passed for all 4 ceremony dates.
+
 ### 2026-10-27 — Phase 5 Content Integration (Slice 1: Calendar, Venue, Hosts)
 - **What changed**:
   - Implemented `AddToCalendar.tsx` and calendar utility `src/lib/calendar.ts` supporting Google Calendar web link and direct Apple Calendar / Outlook `.ics` file generation for all-day celebrations (Tilak: 25 Nov 2026, Vivah: 2 Dec 2026).

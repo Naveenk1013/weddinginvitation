@@ -6,9 +6,11 @@
   "secondaryLocale": "en-IN",
   "confirmed": {
     "invocation": "॥ श्री गणेशाय नमः ॥",
-    "couple": "रचना × उदित",
+    "couple": "रचना संग उदित",
     "events": [
       { "id": "tilak", "date": "2026-11-25", "weekday": "Wednesday" },
+      { "id": "mehendi", "date": "2026-11-29", "weekday": "Sunday" },
+      { "id": "matkor", "date": "2026-11-30", "weekday": "Monday" },
       { "id": "vivah", "date": "2026-12-02", "weekday": "Wednesday" }
     ]
   },

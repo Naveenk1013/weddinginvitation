@@ -2,8 +2,8 @@ import type { TranslationDictionary } from "./types";
 
 export const hi: TranslationDictionary = {
   meta: {
-    title: "रचना × उदित | शुभ विवाह सप्रेम आमंत्रण",
-    description: "रचना एवं उदित के शुभ विवाह उत्सव का डिजिटल सप्रेम आमंत्रण। 25 नवंबर एवं 2 दिसंबर 2026।",
+    title: "रचना संग उदित | शुभ विवाह सप्रेम आमंत्रण",
+    description: "रचना एवं उदित के शुभ विवाह उत्सव का डिजिटल सप्रेम आमंत्रण। 25 नवंबर से 2 दिसंबर 2026।",
   },
   hero: {
     sacredInvocation: "॥ श्री गणेशाय नमः ॥",
@@ -27,6 +27,16 @@ export const hi: TranslationDictionary = {
       title: "शुभ तिलक",
       weekday: "बुधवार",
       dateFormatted: "25 नवंबर 2026",
+    },
+    mehendi: {
+      title: "शुभ मेहंदी",
+      weekday: "रविवार",
+      dateFormatted: "29 नवंबर 2026",
+    },
+    matkor: {
+      title: "शुभ मटकोर",
+      weekday: "सोमवार",
+      dateFormatted: "30 नवंबर 2026",
     },
     vivah: {
       title: "शुभ विवाह",
@@ -57,7 +67,7 @@ export const hi: TranslationDictionary = {
   share: {
     buttonLabel: "सप्रेम निमंत्रण साझा करें",
     copiedMessage: "निमंत्रण लिंक कॉपी हो गया",
-    shareTitle: "रचना × उदित — शुभ विवाह आमंत्रण",
+    shareTitle: "रचना संग उदित — शुभ विवाह आमंत्रण",
     shareText: "॥ श्री गणेशाय नमः ॥ रचना एवं उदित के शुभ विवाह का सप्रेम आमंत्रण।",
   },
   closing: {

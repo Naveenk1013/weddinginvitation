@@ -76,23 +76,24 @@ export function CoupleReveal({ isEntered = true }: CoupleRevealProps) {
             {t.hero.brideName}
           </m.span>
 
-          {/* Sacred Floral Connector Symbol (× / संग / weds) */}
+          {/* Sacred Connector (संग in Hindi, and in English) */}
           <m.span
             key={isEntered ? "entered-conn" : "idle-conn"}
-            initial={shouldReduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.7 }}
-            animate={isEntered ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.7 }}
+            initial={shouldReduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            animate={isEntered ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.7, delay: shouldReduceMotion ? 0 : 1.0, ease: [0.22, 1, 0.36, 1] }}
             style={{
               display: "inline-flex",
               alignItems: "center",
               justifyContent: "center",
               color: "var(--gold)",
-              fontSize: "clamp(1.6rem, 6vw, 2.1rem)",
-              padding: "0 4px",
+              fontSize: "clamp(1.4rem, 5.5vw, 1.9rem)",
+              fontWeight: 600,
+              fontStyle: locale === "en" ? "italic" : "normal",
+              padding: "0 6px",
             }}
-            aria-hidden="true"
           >
-            ×
+            {t.hero.connector}
           </m.span>
 
           {/* Groom's Name (Enters from Right) */}

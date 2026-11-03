@@ -46,19 +46,27 @@ for (const p of pairs) {
   if (!passed) contrastFailures++;
 }
 
-// 2. Confirmed Dates & Wednesday Assertion
-console.log("\n=== 2. DATE & WEDNESDAY ASSERTION ===");
+// 2. Confirmed Dates & Weekday Assertions
+console.log("\n=== 2. DATE & WEEKDAY ASSERTIONS ===");
 const tilak = new Date("2026-11-25T12:00:00Z");
+const mehendi = new Date("2026-11-29T12:00:00Z");
+const matkor = new Date("2026-11-30T12:00:00Z");
 const vivah = new Date("2026-12-02T12:00:00Z");
 
 const tilakDay = tilak.getUTCDay(); // 3 = Wednesday
+const mehendiDay = mehendi.getUTCDay(); // 0 = Sunday
+const matkorDay = matkor.getUTCDay(); // 1 = Monday
 const vivahDay = vivah.getUTCDay(); // 3 = Wednesday
 
 const d1Pass = tilakDay === 3;
-const d2Pass = vivahDay === 3;
+const d2Pass = mehendiDay === 0;
+const d3Pass = matkorDay === 1;
+const d4Pass = vivahDay === 3;
 
 console.log(`[${d1Pass ? "PASS" : "FAIL"}] शुभ तिलक 2026-11-25 is Wednesday (Day ${tilakDay})`);
-console.log(`[${d2Pass ? "PASS" : "FAIL"}] शुभ विवाह 2026-12-02 is Wednesday (Day ${vivahDay})`);
+console.log(`[${d2Pass ? "PASS" : "FAIL"}] शुभ मेहंदी 2026-11-29 is Sunday (Day ${mehendiDay})`);
+console.log(`[${d3Pass ? "PASS" : "FAIL"}] शुभ मटकोर 2026-11-30 is Monday (Day ${matkorDay})`);
+console.log(`[${d4Pass ? "PASS" : "FAIL"}] शुभ विवाह 2026-12-02 is Wednesday (Day ${vivahDay})`);
 
 // 3. Bilingual Dictionaries Parity
 console.log("\n=== 3. DICTIONARY PARITY AUDIT ===");
@@ -108,11 +116,17 @@ try {
   const checks = [
     { name: "Opening Invocation (॥ श्री गणेशाय नमः ॥)", test: html.includes("॥ श्री गणेशाय नमः ॥") },
     { name: "Couple Name Bride (रचना)", test: html.includes("रचना") },
+    { name: "Couple Connector (संग)", test: html.includes("संग") },
     { name: "Couple Name Groom (उदित)", test: html.includes("उदित") },
+    { name: "Doila Hindi Spelling (डोईला)", test: html.includes("डोईला") },
     { name: "Ceremony Heading (सप्रेम आमंत्रण)", test: html.includes("सप्रेम आमंत्रण") },
     { name: "Shubh Tilak Event (शुभ तिलक)", test: html.includes("शुभ तिलक") },
+    { name: "Shubh Mehendi Event (शुभ मेहंदी)", test: html.includes("शुभ मेहंदी") },
+    { name: "Shubh Matkor Event (शुभ मटकोर)", test: html.includes("शुभ मटकोर") },
     { name: "Shubh Vivah Event (शुभ विवाह)", test: html.includes("शुभ विवाह") },
     { name: "Tilak Date (25 नवंबर 2026)", test: html.includes("25 नवंबर 2026") },
+    { name: "Mehendi Date (29 नवंबर 2026)", test: html.includes("29 नवंबर 2026") },
+    { name: "Matkor Date (30 नवंबर 2026)", test: html.includes("30 नवंबर 2026") },
     { name: "Vivah Date (2 दिसंबर 2026)", test: html.includes("2 दिसंबर 2026") },
     { name: "Skip to Content Link", test: html.includes('class="skip-link"') },
     { name: "Semantic <header> landmark", test: html.includes("<header") },
@@ -131,7 +145,7 @@ try {
   }
 
   console.log("\n=== SUMMARY ===");
-  if (contrastFailures === 0 && d1Pass && d2Pass && htmlFailures === 0) {
+  if (contrastFailures === 0 && d1Pass && d2Pass && d3Pass && d4Pass && htmlFailures === 0) {
     console.log("ALL PHASE 4 QA AUDIT CHECKS PASSED SUCCESSFULLY!");
   } else {
     console.log(`Audits completed with ${contrastFailures + htmlFailures} warnings/failures.`);

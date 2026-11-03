@@ -45,12 +45,12 @@ export function AddToCalendar({ event }: AddToCalendarProps) {
 
   const eventTitle =
     locale === "hi"
-      ? `रचना × उदित — ${event.title.hi}`
-      : `Rachna × Udit — ${event.title.en}`;
+      ? `रचना संग उदित — ${event.title.hi}`
+      : `Rachna and Udit — ${event.title.en}`;
 
   const eventDescription =
     locale === "hi"
-      ? `॥ श्री गणेशाय नमः ॥\nरचना एवं उदित के ${event.title.hi} का सप्रेम आमंत्रण।\nस्थान: दोइला बिनटोली, बिहार\nमैप: ${event.mapUrl || ""}`
+      ? `॥ श्री गणेशाय नमः ॥\nरचना एवं उदित के ${event.title.hi} का सप्रेम आमंत्रण।\nस्थान: डोईला बिनटोली, बिहार\nमैप: ${event.mapUrl || ""}`
       : `Shree Ganeshaya Namah\nWedding Celebration of Rachna and Udit — ${event.title.en}.\nVenue: Doila Bintoli, Bihar\nMap: ${event.mapUrl || ""}`;
 
   const locationText =

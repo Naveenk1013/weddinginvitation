@@ -30,7 +30,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked on conten
 - [x] Ganesha SVG path draw (opening)
 - [x] Couple reveal (mirrored entrances + floral connector)
 - [x] Timeline progressive draw
-- [x] Event icon animations (tilak, vivah)
+- [x] Event icon animations (tilak, mehendi, matkor, vivah)
 - [x] Event-card transitions
 - [x] Language-switch sliding thumb + crossfade
 - [x] Button press feedback
@@ -49,11 +49,11 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked on conten
 - [ ] Deploy + final family review
 
 ## Phase 5 — Content-dependent
-- [x] Add-to-Calendar buttons for Tilak & Vivah dates (Google Calendar + Apple/Outlook .ics)
+- [x] Add-to-Calendar buttons for Tilak, Mehendi, Matkor & Vivah dates (Google Calendar + Apple/Outlook .ics)
 - [x] Venue + map link (Doila Bintoli, Bihar / https://maps.app.goo.gl/tQhtXHdjyp7GPzuD7)
 - [x] Family / hosts section (Bride Rachna Kumari parents: Mrs. Ranju Prasad & Mr. Yogendra Prasad)
+- [x] Additional ceremonies: Shubh Mehendi (29 Nov 2026, Sunday) & Shubh Matkor (30 Nov 2026, Monday)
 - [ ] RSVP (WhatsApp contact — to be added later)
-- [ ] Additional ceremonies (pending family confirmation)
 - [ ] Dress code, accommodation (pending family confirmation)
 - [ ] Photo gallery (pending family confirmation)
 - [ ] Background music + controls (pending family confirmation)

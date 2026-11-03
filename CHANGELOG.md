@@ -4,6 +4,41 @@ All notable changes to this project. Newest first. Format loosely follows Keep a
 
 ## [Unreleased]
 
+## [0.1.22] — Couple Name Connector & Doila Devanagari Orthography
+### Changed & Refined
+- **Removed Cross Symbol (`×`)**:
+  - Replaced the `×` symbol with language-specific authentic connectors:
+    - Hindi: `"रचना संग उदित"` (using sacred word `"संग"`).
+    - English: `"Rachna and Udit"` (using `"and"`).
+  - Wired `CoupleReveal.tsx` dynamically to `{t.hero.connector}`.
+  - Updated metadata, Open Graph preview (`opengraph-image.tsx`), Add-to-Calendar event titles, and share texts.
+- **Hometown Devanagari Spelling ("डोईला")**:
+  - Updated the Hindi spelling of Doila from "दोइला" to the authentic family-requested orthography **"डोईला"** ("डोईला बिनटोली, बिहार").
+  - Applied across `wedding.ts` (Tilak, Mehendi, Matkor, Vivah events) and `AddToCalendar.tsx`.
+- **Verification**:
+  - `npm run type-check`: 0 errors.
+  - QA audit: verified presence of "संग" connector and "डोईला" orthography in live HTML.
+
+## [0.1.21] — Mehendi & Matkor Ceremony Dates Integration
+### Added & Configured
+- **Shubh Mehendi (29 November 2026, Sunday)**:
+  - Added full ceremony configuration with authentic imagery (`public/images/events/mehendi.jpg`, 152 KB) and custom animated SVG icon `MehendiIcon.tsx` (henna mandala with floral petal arches and auspicious dots).
+  - Configured hometown venue (Doila Bintoli, Bihar) and direct Google Maps navigation.
+  - Linked to Add-to-Calendar for Google Calendar and Apple/Outlook `.ics` (`rachna-udit-mehendi.ics`).
+- **Shubh Matkor (30 November 2026, Monday)**:
+  - Added authentic representation for the traditional Bihari wedding ritual of Matkor (Matti-kora / Mitti Pujan).
+  - Generated and optimized authentic ceremonial photograph (`public/images/events/matkor.jpg`, 100 KB) depicting the sacred terracotta kalash, mango leaves, coconut, and brass puja thali with glowing diyas and haldi roots.
+  - Designed custom animated SVG icon `MatkorIcon.tsx` (auspicious terracotta pot, mango leaves, coconut, and vermillion tilak).
+  - Linked to Add-to-Calendar for Google Calendar and Apple/Outlook `.ics` (`rachna-udit-matkor.ics`).
+- **Bilingual Localization & Dynamic Event Mapping**:
+  - Added Hindi and English translation keys in `src/i18n/hi.ts`, `src/i18n/en.ts`, and `src/i18n/types.ts`.
+  - Refactored `EventCard.tsx` with dynamic event mappings for titles, weekdays, dates, ceremony badges, and icons.
+  - Updated 3D ceremony corridor (`perspective-tunnel-hero.tsx`) with confirmed dates (`शुभ मेहंदी • 29 Nov` and `शुभ मटकोर • 30 Nov`).
+  - Updated `manifest.json` and `scripts/qa-audit.mjs` with Sunday and Monday weekday assertions.
+- **Verification**:
+  - `tsc --noEmit`: 0 TypeScript errors.
+  - QA audit: 100% passing date, weekday, dictionary parity, and contrast checks.
+
 ## [0.1.20] — Phase 5 Content Integration (Add to Calendar, Hometown Venue & Bride Parents)
 ### Added & Configured
 - **Add-to-Calendar System (`src/lib/calendar.ts`, `AddToCalendar.tsx`)**:

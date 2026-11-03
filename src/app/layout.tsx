@@ -6,13 +6,13 @@ import { MotionProvider } from "@/components/motion/MotionProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rachna-udit-wedding.in"),
-  title: "रचना × उदित | शुभ विवाह सप्रेम आमंत्रण",
+  title: "रचना संग उदित | शुभ विवाह सप्रेम आमंत्रण",
   description:
     "॥ श्री गणेशाय नमः ॥ रचना एवं उदित के शुभ विवाह उत्सव का डिजिटल सप्रेम आमंत्रण। शुभ तिलक: 25 नवंबर 2026, शुभ विवाह: 2 दिसंबर 2026।",
   keywords: ["रचना", "उदित", "शुभ विवाह", "शुभ तिलक", "Wedding Invitation", "Rachna", "Udit"],
   authors: [{ name: "Family of Rachna & Udit" }],
   openGraph: {
-    title: "रचना × उदित | शुभ विवाह सप्रेम आमंत्रण",
+    title: "रचना संग उदित | शुभ विवाह सप्रेम आमंत्रण",
     description: "॥ श्री गणेशाय नमः ॥ 25 नवंबर एवं 2 दिसंबर 2026। सप्रेम पधारें।",
     locale: "hi_IN",
     alternateLocale: ["en_IN"],
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "रचना × उदित | शुभ विवाह सप्रेम आमंत्रण",
+    title: "रचना संग उदित | शुभ विवाह सप्रेम आमंत्रण",
     description: "॥ श्री गणेशाय नमः ॥ 25 नवंबर एवं 2 दिसंबर 2026।",
   },
   icons: {
@@ -48,7 +48,7 @@ export default function RootLayout({
     >
       <body>
         <a href="#main-invitation" className="skip-link">
-          सामग्री पर जाएँ / Skip to main content
+          सामग्री पर जाएँ / Skip to content
         </a>
         <LocaleProvider>
           <MotionProvider>

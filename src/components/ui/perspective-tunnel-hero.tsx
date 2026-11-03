@@ -26,8 +26,8 @@ export interface TunnelItem {
 export const WEDDING_EVENT_IMAGES: TunnelItem[] = [
   { src: "/images/tunnel/01-tilak.jpg", title: { hi: "शुभ तिलक • 25 Nov", en: "Shubh Tilak • 25 Nov" } },
   { src: "/images/tunnel/02-haldi.jpg", title: { hi: "शुभ हल्दी उत्सव", en: "Haldi Celebration" } },
-  { src: "/images/tunnel/03-mehendi.jpg", title: { hi: "मेहंदी की रात", en: "Mehendi Soirée" } },
-  { src: "/images/tunnel/04-sangeet.jpg", title: { hi: "संगीत संध्या", en: "Sangeet Night" } },
+  { src: "/images/tunnel/03-mehendi.jpg", title: { hi: "शुभ मेहंदी • 29 Nov", en: "Shubh Mehendi • 29 Nov" } },
+  { src: "/images/tunnel/04-matkor.jpg", title: { hi: "शुभ मटकोर • 30 Nov", en: "Shubh Matkor • 30 Nov" } },
   { src: "/images/tunnel/05-varmala.jpg", title: { hi: "जयमाला पावन क्षण", en: "Varmala Sacred Vows" } },
   { src: "/images/tunnel/06-phera.jpg", title: { hi: "सप्तपदी सात फेरे", en: "Saptapadi Seven Phere" } },
   { src: "/images/tunnel/07-sindoor.jpg", title: { hi: "सिंदूर एवं परिणय", en: "Sindoor & Nuptials" } },

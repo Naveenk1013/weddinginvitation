@@ -169,5 +169,39 @@ Each image was compressed to lean mobile-friendly sizes (140–200 KB) using Moz
 4. **WhatsApp RSVP Deferred**:
    - Per family instruction, WhatsApp RSVP contact remains pending until numbers are supplied.
 
+## D-035 — Mehendi & Matkor Ceremonies Integration — Accepted
+1. **New Confirmed Auspicious Ceremonies & Dates**:
+   - Added Shubh Mehendi on **Sunday, 29 November 2026** (`2026-11-29`).
+   - Added Shubh Matkor on **Monday, 30 November 2026** (`2026-11-30`), representing the revered Bihari sacred earth pujan ritual.
+   - Updated ceremony chronological schedule:
+     1. Shubh Tilak: Wednesday, 25 November 2026
+     2. Shubh Mehendi: Sunday, 29 November 2026
+     3. Shubh Matkor: Monday, 30 November 2026
+     4. Shubh Vivah: Wednesday, 2 December 2026
+2. **Dedicated Ceremonial Vector Art & Photography**:
+   - Generated and optimized high-resolution, culturally authentic photography for both ceremonies (`mehendi.jpg` 152 KB, `matkor.jpg` 100 KB) in `public/images/events/`.
+   - Built custom ceremonial animated SVG icons matching the design system:
+     - `MehendiIcon.tsx`: Henna floral mandala core with surrounding henna petal arches and auspicious dots.
+     - `MatkorIcon.tsx`: Traditional terracotta kalash/matka with sacred mango leaves, coconut, and vermillion tilak for Matti-kora.
+3. **Bilingual Localization & Calendar Integration**:
+   - Added full Devanagari and English strings across `src/i18n/hi.ts`, `src/i18n/en.ts`, and `src/i18n/types.ts`.
+   - Upgraded `EventCard.tsx` with dynamic event mappings for badges, titles, weekdays, and icons.
+   - Verified that `AddToCalendar` produces instant Google Calendar links and `.ics` files (`rachna-udit-mehendi.ics` and `rachna-udit-matkor.ics`).
+   - Updated 3D ceremony corridor (`perspective-tunnel-hero.tsx`) with dates `शुभ मेहंदी • 29 Nov` and `शुभ मटकोर • 30 Nov`.
+4. **Verification**:
+   - Automated weekday verification confirmed (25 Nov = Wednesday, 29 Nov = Sunday, 30 Nov = Monday, 2 Dec = Wednesday).
+   - Zero TypeScript compilation errors.
+
+## D-036 — Couple Name Connector & Doila Devanagari Orthography — Accepted
+1. **Removed Cross (`×`) Symbol**:
+   - Replaced mathematical cross symbol with culturally respectful language-appropriate connectors:
+     - **Hindi (`hi-IN`)**: `"रचना संग उदित"` (using sacred word `"संग"`).
+     - **English (`en-IN`)**: `"Rachna and Udit"` (using conjunction `"and"`).
+   - Dynamic connector in `CoupleReveal.tsx` wired directly to `{t.hero.connector}` so language switching dynamically alternates between Devanagari `"संग"` and English `"and"`.
+   - Updated metadata, Open Graph cards, calendar payloads, and share dialogs accordingly.
+2. **Standardized Hometown Hindi Spelling to "डोईला"**:
+   - Standardized the authentic Devanagari orthography for the hometown venue in Bihar to **"डोईला"** (replacing the earlier "दोइला").
+   - Updated in `wedding.ts` across all events (Tilak, Mehendi, Matkor, Vivah) and `AddToCalendar.tsx`.
+
 
 
