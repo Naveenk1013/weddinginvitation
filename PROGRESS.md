@@ -53,6 +53,13 @@ Phases 0, 1, 2, 3, and 4 are fully implemented, compiled, and verified. The Next
 | Additional ceremonies | Family | Confirmed (Mehendi: 29 Nov, Matkor: 30 Nov integrated) |
 
 ## Slice log
+### 2026-11-03 — UI Refinement (Slice 4: Replay Buttons Clean-Up & Language Switcher Geometry)
+- **What changed**:
+  - Removed secondary top corridor & video replay buttons from `page.tsx` and floating sparkle circle button from `FloatingControls.tsx`.
+  - Calibrated `.lang-switch-pill` and `.lang-switch-btn` to a compact 34px height and crisp 28px button size.
+- **Verification**:
+  - `npm run type-check`: 0 TypeScript errors.
+
 ### 2026-11-03 — Phase 5 Content Integration (Slice 3: Connector & Hometown Orthography)
 - **What changed**:
   - Replaced `×` symbol with authentic language-appropriate connectors: "रचना संग उदित" in Hindi and "Rachna and Udit" in English.

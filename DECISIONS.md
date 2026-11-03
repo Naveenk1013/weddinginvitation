@@ -203,5 +203,14 @@ Each image was compressed to lean mobile-friendly sizes (140–200 KB) using Moz
    - Standardized the authentic Devanagari orthography for the hometown venue in Bihar to **"डोईला"** (replacing the earlier "दोइला").
    - Updated in `wedding.ts` across all events (Tilak, Mehendi, Matkor, Vivah) and `AddToCalendar.tsx`.
 
+## D-037 — Removal of Redundant Replay Buttons & Language Switcher Refinement — Accepted
+1. **Removed Redundant Replay Buttons**:
+   - Removed the top secondary buttons (`✨ मांगलिक उत्सव दर्शन • Corridor` and `🎥 शुभ प्रवेश द्वार • Entry Video`) from `page.tsx` and the floating circular `✨` button from `FloatingControls.tsx`.
+   - The main invitation now opens directly with the sacred invocation (`॥ श्री गणेशाय नमः ॥`) and couple reveal in an uninterrupted, pure layout.
+2. **Language Switcher Sizing & Pixel Polish**:
+   - Refined `.lang-switch-pill` from an oversized 44px height to a sleek, compact 34px height.
+   - Refined `.lang-switch-btn` to 28px height, 34px min-width, and 0.82rem font size with crisp subpixel anti-aliasing.
+   - Eliminated CSS background conflict on the active tab, rendering the animated maroon thumb (`m.span`) cleanly behind crisp foreground text on high-DPI mobile viewports.
+
 
 

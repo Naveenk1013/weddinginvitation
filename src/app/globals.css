@@ -208,42 +208,47 @@ body {
 
 /* Language Switch Pill */
 .lang-switch-pill {
-  height: 44px;
+  height: 34px;
   background: rgba(255, 253, 248, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(176, 122, 34, 0.4);
-  border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(176, 122, 34, 0.45);
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(110, 30, 42, 0.1), 0 1px 3px rgba(176, 122, 34, 0.12);
   display: inline-flex;
   align-items: center;
-  padding: 4px;
+  padding: 2px;
   position: relative;
 }
 
 .lang-switch-btn {
-  min-width: 44px;
-  height: 36px;
-  border-radius: var(--radius-pill);
+  min-width: 34px;
+  height: 28px;
+  border-radius: 9999px;
   border: none;
   background: transparent;
   font-family: var(--font-serif-family);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   color: var(--muted);
   cursor: pointer;
   transition: color 0.2s ease;
   position: relative;
-  z-index: 1;
   padding: 0 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lang-switch-btn:hover {
+  color: var(--maroon);
 }
 
 .lang-switch-btn[aria-pressed="true"] {
   color: var(--white);
-  background: var(--maroon);
 }
 
 /* Shared Primary Button */

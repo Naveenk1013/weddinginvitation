@@ -4,6 +4,17 @@ All notable changes to this project. Newest first. Format loosely follows Keep a
 
 ## [Unreleased]
 
+## [0.1.23] — Removal of Main Page Replay Buttons & Language Switcher Refinement
+### Changed & Refined
+- **Removed Main Page Replay Buttons**:
+  - Removed top corridor & video replay pill buttons from `src/app/page.tsx`.
+  - Removed floating corridor `✨` circular button from `src/components/ui/FloatingControls.tsx`.
+  - Main invitation now focuses purely on the sacred wedding copy without secondary clutter.
+- **Language Switcher Pixel & Geometry Refinement**:
+  - Calibrated `.lang-switch-pill` height to 34px with 2px padding.
+  - Calibrated `.lang-switch-btn` height to 28px, min-width to 34px, and font-size to 0.82rem with crisp antialiasing and perfect vertical centering.
+  - Eliminated conflicting CSS background so the animated maroon pill renders smoothly.
+
 ## [0.1.22] — Couple Name Connector & Doila Devanagari Orthography
 ### Changed & Refined
 - **Removed Cross Symbol (`×`)**:

@@ -46,20 +46,6 @@ export default function WeddingInvitationPage() {
     }
   };
 
-  const handleReplayTunnel = () => {
-    setEntryStage("tunnel");
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    }
-  };
-
-  const handleReplayVideo = () => {
-    setEntryStage("video");
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    }
-  };
-
   return (
     <div className="page-container">
       {/* STAGE 1: INDIVIDUAL FIRST ENTRY EFFECT: Spatial Perspective Corridor */}
@@ -77,8 +63,8 @@ export default function WeddingInvitationPage() {
       {/* Sacred Top Scroll Progress Indicator */}
       <ScrollProgress />
 
-      {/* Floating Header Controls (Language Switcher & Re-open Ceremony Corridor) */}
-      <FloatingControls onOpenTunnel={handleReplayTunnel} />
+      {/* Floating Header Controls (Language Switcher) */}
+      <FloatingControls />
 
       {/* Ambient Drifting Marigold Petals (Paused if prefers-reduced-motion) */}
       <MarigoldPetals />
@@ -123,73 +109,6 @@ export default function WeddingInvitationPage() {
       >
         {/* Main Ceremonial Invitation Container — Unattached, Clean Native Scroll */}
         <main id="main-invitation" className="ceremonial-scroll-wrap">
-          {/* Re-experience Entry Portal Buttons (Top of invitation) */}
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              gap: 8,
-              paddingTop: 8,
-              paddingBottom: 4,
-            }}
-          >
-            <button
-              type="button"
-              onClick={handleReplayTunnel}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 6,
-                fontSize: "0.78rem",
-                fontWeight: 600,
-                padding: "8px 16px",
-                minHeight: 44,
-                borderRadius: 9999,
-                color: "var(--gold)",
-                backgroundColor: "var(--surface)",
-                border: "1px solid rgba(176, 122, 34, 0.4)",
-                boxShadow: "0 2px 6px rgba(110, 30, 42, 0.06)",
-                cursor: "pointer",
-                letterSpacing: "0.04em",
-                transition: "all 0.2s ease",
-              }}
-              aria-label="मांगलिक उत्सव दर्शन पुनः देखें / Experience Ceremony Corridor"
-            >
-              <span>✨</span>
-              <span>मांगलिक उत्सव दर्शन • Corridor</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={handleReplayVideo}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 6,
-                fontSize: "0.78rem",
-                fontWeight: 600,
-                padding: "8px 16px",
-                minHeight: 44,
-                borderRadius: 9999,
-                color: "var(--gold)",
-                backgroundColor: "var(--surface)",
-                border: "1px solid rgba(176, 122, 34, 0.4)",
-                boxShadow: "0 2px 6px rgba(110, 30, 42, 0.06)",
-                cursor: "pointer",
-                letterSpacing: "0.04em",
-                transition: "all 0.2s ease",
-              }}
-              aria-label="शुभ प्रवेश द्वार पुनः देखें / Replay Entrance Video"
-            >
-              <span>🎥</span>
-              <span>शुभ प्रवेश द्वार • Entry Video</span>
-            </button>
-          </div>
-
           {/* 1. Sacred Invocation */}
           <OpeningInvocation isEntered={entryStage === "invitation"} />
 

@@ -23,7 +23,6 @@ export function LanguageSwitch() {
         className="lang-switch-btn"
         style={{
           color: locale === "hi" ? "var(--white)" : "var(--muted)",
-          position: "relative",
         }}
         title="हिन्दी"
       >
@@ -33,18 +32,19 @@ export function LanguageSwitch() {
             transition={
               shouldReduceMotion
                 ? { duration: 0 }
-                : { type: "spring", visualDuration: 0.35, bounce: 0.15 }
+                : { type: "spring", visualDuration: 0.28, bounce: 0.12 }
             }
             style={{
               position: "absolute",
               inset: 0,
               backgroundColor: "var(--maroon)",
-              borderRadius: "var(--radius-pill)",
-              zIndex: -1,
+              borderRadius: 9999,
+              boxShadow: "0 1px 4px rgba(110, 30, 42, 0.25)",
+              zIndex: 1,
             }}
           />
         )}
-        हि
+        <span style={{ position: "relative", zIndex: 2 }}>हि</span>
       </button>
 
       <button
@@ -55,7 +55,6 @@ export function LanguageSwitch() {
         className="lang-switch-btn"
         style={{
           color: locale === "en" ? "var(--white)" : "var(--muted)",
-          position: "relative",
         }}
         title="English"
       >
@@ -65,18 +64,19 @@ export function LanguageSwitch() {
             transition={
               shouldReduceMotion
                 ? { duration: 0 }
-                : { type: "spring", visualDuration: 0.35, bounce: 0.15 }
+                : { type: "spring", visualDuration: 0.28, bounce: 0.12 }
             }
             style={{
               position: "absolute",
               inset: 0,
               backgroundColor: "var(--maroon)",
-              borderRadius: "var(--radius-pill)",
-              zIndex: -1,
+              borderRadius: 9999,
+              boxShadow: "0 1px 4px rgba(110, 30, 42, 0.25)",
+              zIndex: 1,
             }}
           />
         )}
-        EN
+        <span style={{ position: "relative", zIndex: 2 }}>EN</span>
       </button>
     </div>
   );
